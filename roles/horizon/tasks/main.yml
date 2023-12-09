@@ -9,13 +9,11 @@
       template:
         src: openstack-dashboard.conf.j2
         dest: /etc/apache2/sites-available/openstack-dashboard.conf
-        remote_src: true
 
     - name: Configure Horizon settings
       template:
         src: local_settings.py.j2
         dest: /etc/openstack-dashboard/local_settings.py
-        remote_src: true
 
     - name: Restart Apache
       service:
